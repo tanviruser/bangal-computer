@@ -11,13 +11,21 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <!-- font awsome cdn -->
+    <!-- font awesome cdn -->
+    <!-- manrope font  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <!-- roboto font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
     />
     <!-- tailwin and daisyui cdn -->
     <link
@@ -32,39 +40,57 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              primary: "#eceff4",
             },
             font: {
-              "font-family": "Manrope",
+              manrope: "Manrope",
+              roboto: "Roboto",
             },
           },
         },
       };
     </script>
   </head>
-  <body>
+  <body class="bg-primary">
     <!-- header section  -->
-    <header class="w-11/12 mx-auto pb-10">
+    <header class="w-11/12 mx-auto pb-10 bg-header-img">
       <!-- navbar section  -->
-      <nav class="w-full my-3">
-        <div class="navbar bg-base-100">
+      <nav class="w-full py-5">
+        <div class="navbar">
           <div class="flex-1">
-            <img class="rounded-full h-12 w-12" src="./images/logo.jpeg" alt="">
+            <img
+              class="rounded-full h-16 w-16 bg-lime-500 p-1"
+              src="./images/logo.png"
+              alt=""
+            />
           </div>
-          <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-              <li><a>Home</a></li>
-              <li><a>About Us</a></li>
-              <li><a>Services</a></li>
-              <li><a>Payment</a></li>
+          <div class="flex-none text-center font-semibold">
+            <ul class="menu menu-horizontal px-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <details>
+                  <summary>Services</summary>
+                  <ul class="bg-base-100 rounded-t-none p-2">
+                    <li><a href="">Teams</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Payment</summary>
+                  <ul class="bg-base-100 rounded-t-none p-2">
+                    <li><a href="">Bkash</a></li>
+                    <li><a href="">Nogod</a></li>
+                    <li><a href="">Rocker</a></li>
+                  </ul>
+                </details>
+              </li>
               <li>
                 <details>
                   <summary>Applications</summary>
-                  <ul class="bg-base-100 rounded-t-none p-2">
-                    <li><a>PSC</a></li>
-                    <li><a>JSC</a></li>
-                    <li><a>SSC</a></li>
-                    <li><a>HSC</a></li>
+                  <ul class="bg-base-400 w-full p-2">
+                    <li><a href="">Our Application</a></li>
                   </ul>
                 </details>
               </li>
@@ -76,11 +102,13 @@
       <!-- text content  -->
       <div class="space-y-16">
         <!--first text-content  -->
-        <div class="hero my-10">
+        <div class="hero my-2">
           <div class="hero-content text-center">
             <div class="max-w-lg">
-              <h1 class="text-6xl font-bold">Bengal Computer</h1>
-              <p class="py-6 text-xl">
+              <h1 class="text-6xl font-bold">
+                <span class="font-serif text-lime-600">Bengal</span> Computer
+              </h1>
+              <p class="py-2 text-xl font-medium font-roboto">
                 Victoria College Road, Kandirpara, Cumilla.
               </p>
             </div>
@@ -89,43 +117,37 @@
         <!-- second text-content  -->
         <div class="hero">
           <div class="hero-content text-center max-w-screen-lg">
-            <h1 class="uppercase text-4xl font-bold space-y-6 leading-snug">
+            <h1
+              class="uppercase text-4xl font-bold space-y-6 leading-snug font-manrope"
+            >
               All Online application in bd will be appeared by your trustable
               shope.
             </h1>
           </div>
         </div>
+        <!-- third text content  -->
+        <h2 class="text-2xl text-center font-roboto text-blue-400">
+          <a href="#" class="btn bg-lime-400 rounded-full 
+          font-extrabold text-base">Where we went to apply <i class="fa-solid fa-arrow-right-long rounded-full
+          p-[5px] lg:mr-1 text-white bg-black -rotate-45"></i></a>
+        </h2>
       </div>
     </header>
-  </body>
-  <main>
-    <!-- our team section  -->
-    <section class="w-11/12 mx-auto py-16">
-      <!-- text content -->
-      <div class="hero">
-        <div class="hero-content text-center">
-          <div class="max-w-2xl">
-            <h1 class="text-5xl font-bold uppercase">Our Team</h1>
-            <p class="py-6">
-              At Bengal Computer, our team is a group of dedicated tech
-              enthusiasts and seasoned professionals, passionate about driving
-              innovation in the digital world. With expertise spanning across
-              various domains, we are committed to delivering exceptional
-              solutions and services to our clients.
-            </p>
-          </div>
-        </div>
-      </div>
+    <main>
+     <!-- our team section  -->
+     <section class="max-w-screen-xl mx-auto py-16">
       <!-- card section  -->
-      <div class="lg:flex lg:justify-between gap-8">
+      <div class="grid grid-rows-1 lg:grid-cols-3 gap-8">
         <!-- card 01 -->
-        <div class="card bg-base-100 w-96 h-[550px] shadow-xl">
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
           <figure>
             <img src="./teem/member-01.webp" alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">
-              Sahabuddin Sorkar
+              Omor Faruk Sorkar
               <div class="badge badge-secondary">Owner</div>
             </h2>
             <p class="capitalize">
@@ -135,62 +157,331 @@
             </p>
             <!-- icons content  -->
             <div class="text-2xl">
-              <i class="fa-brands fa-square-facebook"></i>
-              <i class="fa-brands fa-square-twitter"></i>
-              <i class="fa-brands fa-linkedin"></i>
-              <i class="fa-brands fa-square-threads"></i>
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
             </div>
           </div>
         </div>
         <!-- card 02 -->
-        <div class="card bg-base-100 w-96 h-[550px] shadow-xl">
-            <figure>
-              <img src="./teem/member-02.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">
-                Ratul Islam
-                <div class="badge badge-secondary">Senior Worker</div>
-              </h2>
-              <p class="capitalize">
-                Ratul Islam is the Senior worker of Bengal Computer. He is the
-                specialist of all online applications submission to proceed
-                government.
-              </p>
-              <!-- icons content  -->
-              <div class="text-2xl">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-twitter"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-square-threads"></i>
-              </div>
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-02.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Khaled Hossain
+              <div class="badge badge-secondary">Senior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Khaled Hossain is the Senior worker of Bengal Computer. He is
+              the specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
             </div>
           </div>
+        </div>
         <!-- card 03 -->
-        <div class="card bg-base-100 w-96 h-[550px] shadow-xl">
-            <figure>
-              <img src="./teem/member-03.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">
-                Salauddin Shekh
-                <div class="badge badge-secondary">Senior Worker</div>
-              </h2>
-              <p class="capitalize">
-                Salauddin Shekh is the Junior worker of Bengal Computer. He is the
-                specialist of all online applications submission to proceed
-                government.
-              </p>
-              <!-- icons content  -->
-              <div class="text-2xl">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-twitter"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-square-threads"></i>
-              </div>
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-03.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Rayhan Ahmed
+              <div class="badge badge-secondary">Senior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Rayhan Ahmed is the Junior worker of Bengal Computer. He is the
+              specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
             </div>
           </div>
+        </div>
+        <!-- card 04 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-03.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Manik Ahmed
+              <div class="badge badge-secondary">junior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Manik Ahmed is the Junior worker of Bengal Computer. He is the
+              specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- card 05 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-02.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Salman Miah
+              <div class="badge badge-secondary">Senior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Salman Miah is the Junior worker of Bengal Computer. He is the
+              specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- card 06 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-01.webp" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Billal Hossain
+              <div class="badge badge-secondary">Junior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Billal Hossain is the Junior worker of Bengal Computer. He is
+              the specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- card 07 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-01.webp" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Mazharul Islam Sadi
+              <div class="badge badge-secondary">Junior Employee</div>
+            </h2>
+            <p class="capitalize">
+              Mazharul Islam Sadi is the Junior worker of Bengal Computer. He
+              is the specialist of all online applications submission to
+              proceed government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- card 08 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-02.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Naimul Hossain
+              <div class="badge badge-secondary">Fresher Employee</div>
+            </h2>
+            <p class="capitalize">
+              Naimul Hossain is the Junior worker of Bengal Computer. He is
+              the specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- card 09 -->
+        <div
+          class="card bg-base-100 w-96 h-[550px] shadow-xl mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-yellow-300 duration-300"
+        >
+          <figure>
+            <img src="./teem/member-02.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Naimul Hossain
+              <div class="badge badge-secondary">Fresher Employee</div>
+            </h2>
+            <p class="capitalize">
+              Naimul Hossain is the Junior worker of Bengal Computer. He is
+              the specialist of all online applications submission to proceed
+              government.
+            </p>
+            <!-- icons content  -->
+            <div class="text-2xl">
+              <i
+                class="fa-brands fa-square-facebook transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-twitter transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+              <i
+                class="fa-brands fa-square-threads transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-200"
+              ></i>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
+    </main>
+    <!-- footer part start  -->
+    <footer class="w-full bg-neutral-600 flex justify-between">
+      <aside>
+        <div class="flex-1 p-3 flex items-center justify-start gap-3">
+          <img
+            class="bg-lime-500 rounded-full p-1 w-12 h-12w-12"
+            src="./images/logo.png"
+            alt=""
+          />
+          <p class="text-xl font-medium text-gray-100">
+            Copyright © 2024 - All right reserved By Bengal Computer
+          </p>
+        </div>
+      </aside>
+      <nav class="">
+        <ul class="flex gap-4">
+          <li class="text-4xl p-4 text-white">
+            <a
+              href="https://www.facebook.com/profile.php?id=100063463451761&mibextid=ZbWKwL" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li class="text-4xl p-4 text-white">
+            <a href="https://maps.app.goo.gl/nZvbeAMETLYWZPcDA" target="_blank"
+              ><i class="fa-solid fa-map-location-dot"></i
+            ></a>
+          </li>
+          <li class="text-4xl p-4 text-white mr-7">
+            <a
+              href="https://api.whatsapp.com/send?phone=%2B8801812730073&context=ARCYhn5u0Ef0ttt0-S0_bB_9LazZODQ9du-opnvQXIdIdthpsIgbeJFU_tUL69p6_C80N2iI_FupwZgYWm1_gYuTMPtBJLK8Zm5HjGqahUlPB2eF-2SMdJzAj3s6C-3uTzYT4M76KbCBRe_4SBTI_1NISA&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawE73HpleHRuA2FlbQIxMAABHfEMiECBHthJnGqLrdufD8QhYlUIuqX9kX8_5SEjQn1n6u5RYcB8REBBLw_aem_h1b0NNmn_7xDSKybBD2UrQ" target="_blank"
+              ><i class="fa-brands fa-square-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
